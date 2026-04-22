@@ -1,1 +1,154 @@
-rama nosotros
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chesnet - Sobre Nosotros</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+            background-color: #f9fafb; /* Fondo ligeramente gris para que resalte la tarjeta de contacto si agregas una después */
+        }
+
+        /* --- NUEVA BARRA DE NAVEGACIÓN --- */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ffffff;
+            padding: 20px 50px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Pequeña sombra para separar del contenido */
+        }
+
+        .navbar .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #2563eb; /* Azul Chesnet */
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 25px; /* Espacio entre los enlaces */
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #6b7280; /* Color gris para el texto */
+            font-weight: 600;
+            font-size: 0.95rem;
+            padding-bottom: 5px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #2563eb; /* Cambia a azul al pasar el mouse */
+        }
+
+        /* Clase para indicar en qué página estamos (línea azul debajo) */
+        .nav-links a.active {
+            color: #2563eb;
+            border-bottom: 2px solid #2563eb;
+        }
+
+        /* --- HERO SECTION (La parte azul) --- */
+        .hero {
+            background: linear-gradient(90deg, #1e40af, #3b82f6);
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            margin-top: 0;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        .btn-orange {
+            background-color: #f59e0b;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn-orange:hover {
+            background-color: #d97706;
+        }
+
+        /* --- SECCIÓN SOBRE NOSOTROS --- */
+        .about-container {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .about-container h2 {
+            font-size: 2.5rem;
+            color: #1e3a8a;
+            margin-bottom: 20px;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            color: #4b5563;
+            text-align: justify;
+        }
+
+        .highlight {
+            color: #3b82f6;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="#" class="logo">CHESNET</a>
+        <ul class="nav-links">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#" class="active">Nosotros</a></li> <li><a href="#">Servicios</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <h1>Conoce a CHESNET</h1>
+        <p>Tu conexión directa con el futuro digital</p>
+        <a href="#info" class="btn-orange">Saber más</a>
+    </header>
+
+    <section id="info" class="about-container">
+        <h2>¿Qué es Chesnet?</h2>
+        <div class="about-text">
+            <p>
+                En <span class="highlight">Chesnet</span>, somos más que un proveedor de servicios; somos tu puente hacia una conectividad sin límites. Nacimos con la visión de simplificar el acceso a internet, eliminando las complicaciones técnicas y los contratos confusos para ofrecerte una experiencia fluida, rápida y totalmente transparente.
+            </p>
+            <p>
+                Nuestra infraestructura está diseñada para adaptarse a tu ritmo de vida, ya sea que necesites potencia para trabajar desde casa, disfrutar de contenido en alta definición o mantenerte en contacto con los tuyos. En <strong>Chesnet</strong>, creemos que estar conectado es un derecho fundamental, y trabajamos día a día para que esa conexión sea siempre estable, segura y humana.
+            </p>
+        </div>
+    </section>
+
+</body>
+</html>
