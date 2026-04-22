@@ -1,11 +1,213 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>contacto</title>
+    <title>Contacto - Estilo Corporativo</title>
+    <style>
+        /* --- ESTILOS GLOBALES --- */
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8faff; /* Un fondo blanco-azulado muy sutil para que resalte la tarjeta */
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* --- MENÚ SUPERIOR (ESTILO DE LA IMAGEN) --- */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10%;
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .logo {
+            color: #1a73e8; /* Azul vibrante de la imagen */
+            font-size: 24px;
+            font-weight: 800;
+            text-transform: uppercase;
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #555;
+            font-size: 15px;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #1a73e8;
+        }
+
+        /* Indicador visual de la página actual */
+        nav ul li a.active {
+            color: #1a73e8;
+            border-bottom: 2px solid #1a73e8;
+            padding-bottom: 5px;
+        }
+
+        /* --- CONTENEDOR DEL FORMULARIO --- */
+        .main-content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        .contact-card {
+            background-color: #ffffff;
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Sombra suave idéntica a las tarjetas de la imagen */
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        .contact-card h1 {
+            color: #1a73e8;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 32px;
+        }
+
+        .contact-card p {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+
+        /* --- ESTILOS DE LOS CAMPOS --- */
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #444;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #ddd;
+            border-radius: 6px; /* Bordes ligeramente redondeados */
+            box-sizing: border-box;
+            font-size: 15px;
+            font-family: inherit;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #1a73e8;
+            box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.1); /* Brillo azul al escribir */
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* --- BOTÓN NARANJA (ESTILO "CONOCER MÁS") --- */
+        button {
+            width: 100%;
+            padding: 15px;
+            background-color: #f2994a; /* Naranja/Ocre de la imagen */
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #e08639; /* Un tono más oscuro al pasar el ratón */
+            transform: translateY(-2px);
+        }
+
+        /* --- RESPONSIVO --- */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                padding: 15px;
+                gap: 15px;
+            }
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .contact-card {
+                padding: 30px 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-    
+
+    <header>
+        <a href="#" class="logo">TU MARCA</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="contacto.html" class="active">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="contact-card">
+            <h1>Contáctanos</h1>
+            <p>Estamos aquí para ayudarte. Déjanos tu mensaje.</p>
+            
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Nombre completo</label>
+                    <input type="text" id="name" name="name" placeholder="Ej. Juan Pérez" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" placeholder="tu@correo.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Mensaje</label>
+                    <textarea id="message" name="message" placeholder="¿En qué te podemos ayudar?" required></textarea>
+                </div>
+
+                <button type="submit">Enviar mensaje</button>
+            </form>
+        </div>
+    </main>
+
 </body>
 </html>
