@@ -12,7 +12,7 @@
             padding: 0;
             color: #333;
             line-height: 1.6;
-            background-color: #f9fafb; /* Fondo ligeramente gris para que resalte la tarjeta de contacto si agregas una después */
+            background-color: #f9fafb; /* Fondo ligeramente gris para que resalte la tarjeta */
         }
 
         /* --- NUEVA BARRA DE NAVEGACIÓN --- */
@@ -22,7 +22,7 @@
             align-items: center;
             background-color: #ffffff;
             padding: 20px 50px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Pequeña sombra para separar del contenido */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
 
         .navbar .logo {
@@ -37,14 +37,14 @@
         .nav-links {
             list-style: none;
             display: flex;
-            gap: 25px; /* Espacio entre los enlaces */
+            gap: 25px;
             margin: 0;
             padding: 0;
         }
 
         .nav-links a {
             text-decoration: none;
-            color: #6b7280; /* Color gris para el texto */
+            color: #6b7280;
             font-weight: 600;
             font-size: 0.95rem;
             padding-bottom: 5px;
@@ -52,10 +52,9 @@
         }
 
         .nav-links a:hover {
-            color: #2563eb; /* Cambia a azul al pasar el mouse */
+            color: #2563eb;
         }
 
-        /* Clase para indicar en qué página estamos (línea azul debajo) */
         .nav-links a.active {
             color: #2563eb;
             border-bottom: 2px solid #2563eb;
@@ -98,7 +97,7 @@
         /* --- SECCIÓN SOBRE NOSOTROS --- */
         .about-container {
             max-width: 800px;
-            margin: 60px auto;
+            margin: 60px auto 40px auto;
             padding: 0 20px;
             text-align: center;
         }
@@ -119,6 +118,47 @@
             color: #3b82f6;
             font-weight: bold;
         }
+
+        /* --- NUEVA SECCIÓN: MEJORA DEL ALUMNO --- */
+        .student-section {
+            max-width: 800px;
+            margin: 0 auto 60px auto;
+            padding: 40px 30px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            border-top: 5px solid #f59e0b; /* Acento naranja a juego con el botón */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Efecto al pasar el mouse por la nueva sección */
+        .student-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
+        }
+
+        .student-section h2 {
+            font-size: 2rem;
+            color: #1e3a8a;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .student-section h3 {
+            font-size: 1.2rem;
+            color: #2563eb;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .student-section p {
+            font-size: 1.05rem;
+            color: #4b5563;
+            line-height: 1.7;
+            margin: 0;
+        }
     </style>
 </head>
 <body>
@@ -127,7 +167,8 @@
         <a href="#" class="logo">CHESNET</a>
         <ul class="nav-links">
             <li><a href="#">Inicio</a></li>
-            <li><a href="#" class="active">Nosotros</a></li> <li><a href="#">Servicios</a></li>
+            <li><a href="#" class="active">Nosotros</a></li> 
+            <li><a href="#">Servicios</a></li>
             <li><a href="#">Contacto</a></li>
         </ul>
     </nav>
@@ -148,6 +189,14 @@
                 Nuestra infraestructura está diseñada para adaptarse a tu ritmo de vida, ya sea que necesites potencia para trabajar desde casa, disfrutar de contenido en alta definición o mantenerte en contacto con los tuyos. En <strong>Chesnet</strong>, creemos que estar conectado es un derecho fundamental, y trabajamos día a día para que esa conexión sea siempre estable, segura y humana.
             </p>
         </div>
+    </section>
+
+    <section class="student-section">
+        <h2>Mejoras de la Página</h2>
+        <h3>Desarrollado por: Jesus Manuel Noh Hau</h3>
+        <p>
+            Como parte de la mejora continua del proyecto Chesnet, se ha integrado esta nueva sección para destacar la evolución de la interfaz. La actualización incluye la optimización de los estilos visuales mediante CSS puro, garantizando un diseño responsivo, limpio y alineado con la identidad corporativa.
+        </p>
     </section>
 
 </body>
