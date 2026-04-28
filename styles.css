@@ -44,10 +44,74 @@ body {
     padding: 1rem 20px;
 }
 
+/* Header Styles */
+.header {
+    background-color: var(--bg-white);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 20px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
 .logo {
     font-size: 1.8rem;
     font-weight: 700;
     color: var(--primary-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.logo:hover {
+    color: var(--primary-dark);
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.nav a:hover,
+.nav a.active {
+    color: var(--primary-color);
+}
+
+.nav a:hover::after,
+.nav a.active::after {
+    width: 100%;
 }
 
 .nav-links {
@@ -61,10 +125,6 @@ body {
     color: var(--text-dark);
     font-weight: 500;
     transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-    color: var(--primary-color);
 }
 
 /* Hero Section */
@@ -252,5 +312,231 @@ body {
 
     .features-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+/* Servicios Section Styles */
+.servicios {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.5) 0%, rgba(249, 250, 251, 0.5) 100%);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    margin-top: 2rem;
+}
+
+/* Tarjetas de Servicios */
+.servicio-card {
+    background: white;
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border-top: 4px solid var(--primary-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.servicio-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.05) 0%, rgba(245, 158, 11, 0.05) 100%);
+    transition: height 0.3s ease;
+    z-index: 0;
+}
+
+.servicio-card:hover::before {
+    height: 100%;
+}
+
+.servicio-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 15px 40px rgba(37, 99, 235, 0.15);
+}
+
+.servicio-icon {
+    font-size: 3.5rem;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+    z-index: 1;
+    position: relative;
+}
+
+.servicio-card:hover .servicio-icon {
+    transform: scale(1.15) rotate(5deg);
+}
+
+.servicio-card h3 {
+    font-size: 1.4rem;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.servicio-card p {
+    color: var(--text-light);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.servicio-link {
+    display: inline-block;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.servicio-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+    margin-top: 2px;
+}
+
+.servicio-link:hover::after {
+    width: 100%;
+}
+
+/* Variaciones de colores por tarjeta */
+.servicio-card-1 {
+    border-top-color: #2563eb;
+}
+
+.servicio-card-1:hover {
+    box-shadow: 0 15px 40px rgba(37, 99, 235, 0.15);
+}
+
+.servicio-card-2 {
+    border-top-color: #f59e0b;
+}
+
+.servicio-card-2:hover {
+    box-shadow: 0 15px 40px rgba(245, 158, 11, 0.15);
+}
+
+.servicio-card-3 {
+    border-top-color: #ef4444;
+}
+
+.servicio-card-3:hover {
+    box-shadow: 0 15px 40px rgba(239, 68, 68, 0.15);
+}
+
+.servicio-card-4 {
+    border-top-color: #10b981;
+}
+
+.servicio-card-4:hover {
+    box-shadow: 0 15px 40px rgba(16, 185, 129, 0.15);
+}
+
+.servicio-card-5 {
+    border-top-color: #8b5cf6;
+}
+
+.servicio-card-5:hover {
+    box-shadow: 0 15px 40px rgba(139, 92, 246, 0.15);
+}
+
+.servicio-card-6 {
+    border-top-color: #06b6d4;
+}
+
+.servicio-card-6:hover {
+    box-shadow: 0 15px 40px rgba(6, 182, 212, 0.15);
+}
+
+/* Sección CTA de Servicios */
+.servicios-cta {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    color: white;
+    padding: 60px 20px;
+}
+
+.cta-content {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.servicios-cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 800;
+    animation: slideDown 0.6s ease;
+}
+
+.servicios-cta p {
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+    opacity: 0.95;
+    animation: slideUp 0.6s ease 0.1s backwards;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+    }
+
+    .servicios-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .servicio-card {
+        padding: 2rem;
+    }
+
+    .servicios-cta h2 {
+        font-size: 2rem;
+    }
+
+    .servicios-cta p {
+        font-size: 1rem;
     }
 }
